@@ -329,6 +329,128 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
+    // Video Modal Logic (robust)
+    const videoModal = document.getElementById('video-modal');
+    const videoBtns = document.querySelectorAll('.video-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const projectVideo = document.getElementById('project-video');
+    const videoStatus = document.getElementById('video-status');
+    let lastSrc = '';
+
+    function showModal() {
+        videoModal.style.display = 'block';
+        videoModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function hideModal() {
+        videoModal.style.display = 'none';
+        videoModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        safeStopAndReset();
+    }
+
+    function showLoading() {
+        if (videoStatus) {
+            videoStatus.style.display = 'flex';
+            const loading = videoStatus.querySelector('.video-loading');
+            const err = videoStatus.querySelector('.video-error');
+            if (loading) loading.style.display = 'flex';
+            if (err) err.style.display = 'none';
+        }
+    }
+
+    function showError() {
+        if (videoStatus) {
+            videoStatus.style.display = 'flex';
+            const loading = videoStatus.querySelector('.video-loading');
+            const err = videoStatus.querySelector('.video-error');
+            if (loading) loading.style.display = 'none';
+            if (err) {
+                err.style.display = 'block';
+                if (lastSrc) {
+                    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                    const errorText = translations[currentLang]['video_error_text'];
+                    const linkText = translations[currentLang]['video_error_open_in_new_tab'];
+                    err.innerHTML = `${errorText} <a href="${lastSrc}" target="_blank" rel="noopener" style="margin-left:8px;color:#3498db;">${linkText}</a>`;
+                }
+            }
+        }
+    }
+
+    function hideStatus() {
+        if (videoStatus) videoStatus.style.display = 'none';
+    }
+
+    function safeStopAndReset() {
+        try {
+            projectVideo.pause();
+        } catch (e) {}
+        projectVideo.removeAttribute('src');
+        // Force unload
+        projectVideo.load();
+        lastSrc = '';
+        showLoading();
+    }
+
+    function attachVideoEventsOnce() {
+        if (!projectVideo._eventsBound) {
+            projectVideo.addEventListener('loadeddata', () => {
+                hideStatus();
+            });
+            projectVideo.addEventListener('canplay', () => {
+                hideStatus();
+            });
+            projectVideo.addEventListener('error', () => {
+                showError();
+            });
+            projectVideo.addEventListener('emptied', () => {
+                showLoading();
+            });
+            projectVideo._eventsBound = true;
+        }
+    }
+
+    attachVideoEventsOnce();
+
+    videoBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const videoSrc = this.getAttribute('data-video-src');
+            if (!videoSrc) return;
+            showModal();
+            showLoading();
+
+            if (lastSrc !== videoSrc) {
+                safeStopAndReset();
+                projectVideo.src = videoSrc;
+                lastSrc = videoSrc;
+            }
+
+            // Start loading and play when possible
+            const playPromise = projectVideo.play();
+            if (playPromise && typeof playPromise.then === 'function') {
+                playPromise.then(() => hideStatus()).catch(() => {
+                    // Autoplay might be blocked; show controls and wait for user
+                    hideStatus();
+                });
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', hideModal);
+
+    window.addEventListener('click', function(event) {
+        if (event.target === videoModal) {
+            hideModal();
+        }
+    });
+
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && videoModal.style.display === 'block') {
+            hideModal();
+        }
+    });
+
     // At the end of DOMContentLoaded, initialize the language
     const savedLang = localStorage.getItem('preferredLanguage');
     const browserLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
