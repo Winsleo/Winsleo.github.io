@@ -2,7 +2,7 @@ const translations = {
     zh: {
         // Meta
         "headTitle": "王世隆的个人主页",
-        "pageTitle": "个人主页",
+        "pageTitle": "世隆的个人主页",
         // Navbar
         "nav_about_me": "关于我",
         "nav_skills": "技能",
@@ -129,7 +129,7 @@ const translations = {
         "project1_h2": "Sim2Real: 使用合成数据训练具身语义导航模型，探索多模态大模型、拓扑导航等技术路径",
         "project1_code_link": "<a href=\"https://github.com/Winsleo\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 代码</a>",
 
-        "project2_type": "ICRA DJI Robomaster 人工智能挑战赛",
+        "project2_type": "ICRA DJI Robomaster 人工智能挑战赛（亚军）",
         "project2_title": "全自主多机器人对抗",
         "project2_desc": "赛事以真实场景下的全自主多机器人对抗为核心，致力于推动机器人前沿技术的研究与应用。",
         "project2_h1": "使用UE4仿真数据训练YOLO+MobileNet模型检测装甲板",
@@ -172,7 +172,7 @@ const translations = {
     en: {
         // Meta
         "headTitle": "Shilong Wang's Homepage",
-        "pageTitle": "Homepage",
+        "pageTitle": "Shilong's Homepage",
         // Navbar
         "nav_about_me": "About Me",
         "nav_skills": "Skills",
@@ -298,7 +298,7 @@ const translations = {
         "project1_h2": "Sim2Real: Trained embodied semantic navigation models with synthetic data, exploring paths like multimodal large models and topological navigation.",
         "project1_code_link": "<a href=\"https://github.com/Winsleo\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Code</a>",
 
-        "project2_type": "ICRA DJI Robomaster AI Challenge",
+        "project2_type": "ICRA DJI Robomaster AI Challenge(Runner-up)",
         "project2_title": "Fully Autonomous Multi-Robot Confrontation",
         "project2_desc": "The competition focuses on fully autonomous multi-robot confrontation in real-world scenarios, aiming to advance robotics technologies.",
         "project2_h1": "Trained YOLO+MobileNet models on UE4 simulation data for armor plate detection.",
