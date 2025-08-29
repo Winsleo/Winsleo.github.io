@@ -97,6 +97,7 @@ const translations = {
         "skills_category_gpu_extra": "并行计算",
         "skill_deep_learning": "深度学习（PyTorch, transformers）",
         "skill_rl": "强化学习",
+        "skill_multimodal_llm": "多模态大模型（LLaVA、QwenVL）",
         "skill_langchain": "LangChain",
         "skill_vln": "视觉语言导航（NoMad, StreamVLN, NaVILA）",
         "skill_ros": "ROS & ROS2",
@@ -138,6 +139,18 @@ const translations = {
         "project2_competition_link": "<a href=\"https://www.robomaster.com/zh-CN/robo/icra\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-flag-checkered\"></i> 赛事官网</a>",
         "project2_award_link": "<a href=\"https://www.robomaster.com/zh-CN/resource/pages/announcement/1339\" class=\"btn-code\"><i class=\"fas fa-award\"></i> 获奖链接</a>",
         "project2_code_link": "<a href=\"https://github.com/Winsleo\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 代码</a>",
+        
+        "project_nav1_type": "华为云物理智能创新lab",
+        "project_nav1_title": "基于视频理解的语义导航",
+        "project_nav1_desc": "利用视频大模型理解视频中的环境语义，实现基于自然语言指令的智能导航。通过多模态融合，让机器人能够理解复杂场景并执行高级导航任务。",
+        "project_nav1_h1": "集成视频大模型，实现语义理解与场景认知",
+        "project_nav1_h2": "支持自然语言指令，提升导航的智能化和交互性",
+        "project_nav1_code_link": "<a href=\"https://github.com/Winsleo/LLM_Navigation.git\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 代码</a>",
+        
+        "project_nav2_type": "华为云物理智能创新lab",
+        "project_nav2_title": "图像目标导航算法真机部署",
+        "project_nav2_desc": "基于Diffusion Policy的端到端图像目标导航算法部署到真实机器人平台，实现基于视觉的目标识别与路径规划。",
+        "project_nav2_blog_link": "<a href=\"https://blog.csdn.net/wsl_longwudi/article/details/148709926?fromshare=blogdetail&sharetype=blogdetail&sharerId=148709926&sharerefer=PC&sharesource=wsl_longwudi&sharefrom=from_link\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 博客</a>",
         
         "project3_type": "英伟达 CUDA on Arm Platform 夏令营",
         "project3_title": "GPU加速项目实践",
@@ -268,6 +281,7 @@ const translations = {
         "skills_category_gpu_extra": "Parallel Computing",
         "skill_deep_learning": "Deep Learning (PyTorch, transformers)",
         "skill_rl": "Reinforcement Learning",
+        "skill_multimodal_llm": "Multimodal Large Models (LLaVA, QwenVL)",
         "skill_langchain": "LangChain",
         "skill_vln": "Visual Language Navigation (NoMad, StreamVLN, NaVILA)",
         "skill_ros": "ROS & ROS2",
@@ -309,6 +323,18 @@ const translations = {
         "project2_award_link": "<a href=\"https://www.robomaster.com/en-US/resource/pages/announcement/1339\" class=\"btn-code\"><i class=\"fas fa-award\"></i> Award Link</a>",
         "project2_code_link": "<a href=\"https://github.com/Winsleo\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Code</a>",
         
+        "project_nav1_type": "Huawei Cloud Physical Intelligence Innovation Lab",
+        "project_nav1_title": "Semantic Navigation Based on Video Understanding",
+        "project_nav1_desc": "Leverage video large models to understand environmental semantics in videos, enabling intelligent navigation based on natural language instructions. Through multimodal fusion, robots can understand complex scenes and execute advanced navigation tasks.",
+        "project_nav1_h1": "Integrate video large models for semantic understanding and scene cognition",
+        "project_nav1_h2": "Support natural language instructions to enhance navigation intelligence and interactivity",
+        "project_nav1_code_link": "<a href=\"https://github.com/Winsleo/LLM_Navigation.git\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Code</a>",
+        
+        "project_nav2_type": "Huawei Cloud Physical Intelligence Innovation Lab",
+        "project_nav2_title": "Real Robot Deployment of Image Goal Navigation Algorithm",
+        "project_nav2_desc": "Deploy end-to-end image goal navigation algorithm based on Diffusion Policy to real robot platforms, achieving visual target recognition and path planning.",
+        "project_nav2_blog_link": "<a href=\"https://blog.csdn.net/wsl_longwudi/article/details/148709926?fromshare=blogdetail&sharetype=blogdetail&sharerId=148709926&sharerefer=PC&sharesource=wsl_longwudi&sharefrom=from_link\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Blog</a>",
+
         "project3_type": "NVIDIA CUDA on Arm Platform Summer Camp",
         "project3_title": "GPU Acceleration Project Practice",
         "project3_desc": "Implemented GPU-accelerated projects using CUDA, including a universal genetic algorithm, parallel sorting, and matrix operations. Created a popular CSDN column on parallel programming.",
