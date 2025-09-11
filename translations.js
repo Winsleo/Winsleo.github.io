@@ -166,6 +166,11 @@ const translations = {
         "project5_title": "基于蚁群算法的轨迹优化",
         "project5_desc": "使用蚁群算法进行路径/轨迹优化求解，展示参数设置、收敛特性与实验可视化结果。",
         "project5_code_link": "<a href=\"https://github.com/Winsleo/ant_colony_plan\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 代码</a>",
+        
+        "project_vln_type": "华为云物理智能创新lab",
+        "project_vln_title": "VLN Platform：多模型可插拔评测与数据生成框架",
+        "project_vln_desc": "一个视觉-语言导航评测平台，采用可插拔Agent架构，便于快速接入新模型并在Habitat等环境中进行多模型对比评测。",
+        "project_vln_code_link": "<a href=\"https://github.com/Winsleo/vln_platform\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 代码</a>",
         "watch_demo": "观看演示",
         // Awards
         "awards_section_title": "获奖情况",
@@ -210,7 +215,7 @@ const translations = {
         "interest_dm_da": "Robotics & SLAM",
         "interest_1": "Enhancing multimodal models with 3D vision: leverage end-to-end 3D reconstruction frameworks (e.g., VGGT) to learn 3D representations, plug the 3D-pretrained encoder into MLLMs, and train on multi-task data to bridge the 2D–3D gap.",
         "interest_2": "Photorealistic and geometrically-accurate embodied data generation: reconstruct Real2Sim environments via SLAM + differentiable rendering, then produce large-scale diverse data with domain randomization to fuel training and evaluation.",
-        "interest_3": "From supervised to autonomous embodied learning: equip agents with self-critique/reflection/correction to learn from both successes and failures, improving generalization and sample efficiency toward unified locomotion+manipulation.",
+        "interest_3": "From supervised to autonomous embodied learning: equip agents with self-critique/reflection/correction to learn from both successes and failures, improving generalization and sample efficiency toward unified navigation+manipulation.",
         "education": "Education",
         "edu_phd_period": "2021 - 2023",
         "edu_phd_title": "Master's Degree",
@@ -349,6 +354,11 @@ const translations = {
         "project5_title": "Ant Colony-based Trajectory Optimization",
         "project5_desc": "Trajectory/path optimization using the Ant Colony algorithm, including parameter settings, convergence behavior, and visualization.",
         "project5_code_link": "<a href=\"https://github.com/Winsleo/ant_colony_plan\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Code</a>",
+        
+        "project_vln_type": "Huawei Cloud Physical Intelligence Innovation Lab",
+        "project_vln_title": "VLN Platform: Pluggable Multi-Model Evaluation and Data Generation Framework",
+        "project_vln_desc": "A Vision-and-Language Navigation evaluation platform with a pluggable Agent architecture, enabling easy model integration and multi-model benchmarking in Habitat.",
+        "project_vln_code_link": "<a href=\"https://github.com/Winsleo/vln_platform\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Code</a>",
         "watch_demo": "Watch Demo",
         // Awards
         "awards_section_title": "Awards & Honors",
