@@ -178,6 +178,13 @@ const translations = {
         "project_fp_desc": "学习并复现 NVLabs FoundationPose，探索渲染-比对范式在6D位姿估计中的对于遮挡与模型尺寸标定等因素的鲁棒性。",
         "project_fp_code_link": "<a href=\"https://github.com/Winsleo/FoundationPose_Evaluation\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 仓库</a>",
         "project_fp_blog_link": "<a href=\"https://blog.csdn.net/wsl_longwudi/article/details/146921280?fromshare=blogdetail&sharetype=blogdetail&sharerId=146921280&sharerefer=PC&sharesource=wsl_longwudi&sharefrom=from_link\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-blog\"></i> 博客</a>",
+        
+        // Thesis Project (Master's)
+        "project_thesis_type": "研究项目",
+        "project_thesis_title": "基于形状先验的物体级SLAM算法研究（硕士毕业论文）",
+        "project_thesis_desc": "以已知几何模型（Neural SDF 或 Mesh）的物体实例为路标，在激光惯性SLAM中引入物体路标约束构建联合优化问题，提升轨迹与地图的全局一致性；并利用物体形状先验实现地图补全，提高建图效率。",
+        "project_thesis_pdf_link": "<a href=\"https://kns.cnki.net/kcms2/article/abstract?v=0xftKHkdwWTY49VEI4Z7h87WKVmMTQW-_pHAWTkcOgYwzmSO1EcYD3njDtIe9abhiwcptH9ukmdviVylb0xLqD_rgi0nQx6OKm6XEyJOXf5WWDuPWHp48xwZVh_OVI_lbWmFCUj2j-jXJh5mNTPVScKrH43D1SZ7snKfY84cBtc=&uniplatform=NZKPT\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-file-pdf\"></i> PDF</a>",
+        "project_thesis_code_link": "<a href=\"https://github.com/Winsleo/ref_liom\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> 代码</a>",
         // Awards
         "awards_section_title": "获奖情况",
         "award1": "华为 红衫奖",
@@ -186,6 +193,12 @@ const translations = {
         "award4": "全国大学生节能减排社会实践与科技竞赛全国三等奖",
         "award5": "哈尔滨工业大学优秀毕业生",
         "award6": "哈尔滨工业大学优秀学生",
+        "award7": "一等人民奖学金（2019年春季学期, 前3%）",
+        "award8": "二等人民奖学金（2018年春季学期）",
+        "award9": "二等人民奖学金（2020年春季学期）",
+        "award10": "三等人民奖学金（2017年秋季学期）",
+        "award11": "三等人民奖学金（2019年秋季学期）",
+        "award12": "2018-2019 西门子奖学金",
         // Video Modal
         "video_loading": "视频加载中...",
         "video_error_text": "视频加载失败，请稍后重试。",
@@ -372,14 +385,28 @@ const translations = {
         "project_fp_desc": "Learn and reproduce NVLabs FoundationPose, and explore the robustness of the render-and-compare paradigm in 6D pose estimation, focusing on occlusion and reference-model scale calibration.",
         "project_fp_code_link": "<a href=\"https://github.com/Winsleo/FoundationPose_Evaluation\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Repo</a>",
         "project_fp_blog_link": "<a href=\"https://blog.csdn.net/wsl_longwudi/article/details/146921280?fromshare=blogdetail&sharetype=blogdetail&sharerId=146921280&sharerefer=PC&sharesource=wsl_longwudi&sharefrom=from_link\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-blog\"></i> Blog</a>",
+        
+        // Thesis Project (Master's)
+        "project_thesis_type": "Research Project",
+        "project_thesis_title": "Shape-prior-based Object-oriented SLAM Algorithm (Master's Thesis)",
+        "project_thesis_desc": "Treat object instances with known geometric models (Neural SDF or Mesh) as landmarks and introduce object-landmark constraints into LiDAR–inertial SLAM to formulate a joint optimization that improves global consistency; leverage shape priors for map completion to enhance efficiency.",
+        "project_thesis_pdf_link": "<a href=\"https://kns.cnki.net/kcms2/article/abstract?v=0xftKHkdwWTY49VEI4Z7h87WKVmMTQW-_pHAWTkcOgYwzmSO1EcYD3njDtIe9abhiwcptH9ukmdviVylb0xLqD_rgi0nQx6OKm6XEyJOXf5WWDuPWHp48xwZVh_OVI_lbWmFCUj2j-jXJh5mNTPVScKrH43D1SZ7snKfY84cBtc=&uniplatform=NZKPT\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-file-pdf\"></i> PDF</a>",
+        "project_thesis_code_link": "<a href=\"https://github.com/Winsleo/ref_liom\" target=\"_blank\" rel=\"noopener\" class=\"btn-code\"><i class=\"fas fa-code\"></i> Code</a>",
         // Awards
         "awards_section_title": "Awards & Honors",
         "award1": "Huawei Redwood Award",
         "award2": "2022 ICRA DJI RoboMaster AI Challenge - 4th Place & First Prize",
         "award3": "2021 ICRA DJI RoboMaster AI Challenge - 2nd Place & First Prize",
-        "award4": "National Third Prize in National University Student Social Practice and Science Contest on Energy Saving & Emission Reduction",
+        "award4": "National Third Prize in National College Students Social Practice and Science Contest on Energy Saving & Emission Reduction",
         "award5": "Outstanding Graduate award of Harbin Institute of Technology",
         "award6": "Outstanding Student award of Harbin Institute of Technology",
+        "award7": "People's First-Class Scholarship (Spring semester of 2019, Top 3%)",
+        "award8": "People's Second-Class Scholarship (Spring semester of 2018)",
+        "award9": "People's Second-Class Scholarship (Spring semester of 2020)",
+        "award10": "People's Third-Class Scholarship (Autumn semester of 2017)",
+        "award11": "People's Third-Class Scholarship (Autumn semester of 2019)",
+        "award12": "2018-2019 Siemens Scholarship",
+
         // Video Modal
         "video_loading": "Loading video...",
         "video_error_text": "Failed to load video, please try again later.",
