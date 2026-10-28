@@ -12,6 +12,10 @@
     <link rel="icon" href="images/profile.webp" type="image/webp">
     <title data-i18n="headTitle"></title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme-space.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -43,6 +47,8 @@
     </nav>
 
     <!-- About me -->
+    <canvas id="world-field" aria-hidden="true"></canvas>
+
     <section id="about-me" class="about-me">
         <div class="container">
             <h2 class="section-title" data-i18n="about_me_section_title"></h2>
@@ -54,6 +60,7 @@
                         </p>
                         
                         <h3 data-i18n="research_interests"></h3>
+                        <p class="research-tagline" data-i18n="research_tagline"></p>
                         <ul class="research-interests">
                             <!-- <li><i class="fas fa-robot"></i> <span data-i18n="interest_ai_ml">具身/空间智能</span></li>
                             <li><i class="fas fa-cubes"></i> <span data-i18n="interest_dl_nn">多模态大模型</span></li>
@@ -136,13 +143,6 @@
                                     <div class="contact-details">
                                         <span class="contact-label" data-i18n="contact_email"></span>
                                         <span class="contact-value">wangshilong@sjtu.edu.cn</span>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
-                                    <div class="contact-details">
-                                        <span class="contact-label" data-i18n="contact_phone"></span>
-                                        <span class="contact-value">+86 18730953800</span>
                                     </div>
                                 </div>
                                 <div class="contact-item">
@@ -660,5 +660,7 @@
 
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <script src="worldfield.js"></script>
+    <script src="theme-toggle.js"></script>
 </body>
 </html>

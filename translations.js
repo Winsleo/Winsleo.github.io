@@ -17,8 +17,9 @@ const translations = {
         "about_me_section_title": "关于我",
         // Background
         "self_introduction": "自我介绍",
-        "self_introduction_p": "我是上海交通大学与上海创智学院联合培养的人工智能博士研究生，研究聚焦于具身智能的数据闭环（重建-生成-模型训测）。此前曾任职于华为物理智能创新lab。我于2023年在哈尔滨工业大学获得控制科学与工程硕士学位，师从<a href=\"https://homepage.hit.edu.cn/hefenghua\" target=\"_blank\">贺风华教授</a>。我长期从事机器人感知定位、自主导航与三维重建领域的研究。曾作为核心成员获 ICRA DJI RoboMaster 人工智能挑战赛亚军。我的目标是将人工智能真正用于真实物理世界，探索空间智能、具身智能与大模型的深度融合。希望能做出一些很酷的东西😉🤖🚀✨",
+        "self_introduction_p": "我是上海交通大学与上海创智学院联合培养的人工智能博士研究生，师从<a href=\"https://thinklab.sjtu.edu.cn/\" target=\"_blank\">严骏驰教授</a>，研究聚焦于具身智能的数据闭环（重建-生成-模型训测）。此前曾任职于华为物理智能创新lab。我于2023年在哈尔滨工业大学获得控制科学与工程硕士学位，师从<a href=\"https://homepage.hit.edu.cn/hefenghua\" target=\"_blank\">贺风华教授</a>。我长期从事机器人感知定位、自主导航与三维重建领域的研究。曾作为核心成员获 ICRA DJI RoboMaster 人工智能挑战赛亚军。我的目标是将人工智能真正用于真实物理世界，探索空间智能、具身智能与大模型的深度融合。希望能做出一些很酷的东西😉🤖🚀✨",
         "research_interests": "研究兴趣",
+        "research_tagline": "世界模型 · 机器人 · 空间智能",
         "interest_ai_ml": "具身/空间智能",
         "interest_dl_nn": "多模态大模型",
         "interest_nlp": "三维重建",
@@ -48,9 +49,8 @@ const translations = {
         "work2_desc": "",
         "contact_info": "联系方式",
         "contact_email": "邮箱",
-        "contact_phone": "电话",
         "contact_address": "地址",
-        "contact_address_value": "中国·上海",
+        "contact_address_value": "上海创智学院",
         // Publications
         "publications_section_title": "发表",
         "filter_all": "全部",
@@ -190,7 +190,7 @@ const translations = {
         "video_error_open_in_new_tab": "在新标签页打开",
         "video_not_supported": "您的浏览器不支持视频播放。",
         // Footer
-        "footer_text": "&copy; 2025 王世隆. 保留所有权利."
+        "footer_text": "&copy; 2026 王世隆. 保留所有权利."
     },
     en: {
         // Meta
@@ -210,8 +210,9 @@ const translations = {
         "about_me_section_title": "About Me",
         // Background
         "self_introduction": "Self-introduction",
-        "self_introduction_p": "I'm a joint Ph.D. student in Artificial Intelligence at Shanghai Jiao Tong University and Shanghai Innovation Institute, focusing on the data loop (reconstruction-generation-model training & testing) for embodied intelligence. I previously worked at Huawei's Physical Intelligence Innovation Lab. I received my Master's degree in Control Science and Engineering at Harbin Institute of Technology in 2023, under the supervision of <a href=\"https://homepage.hit.edu.cn/hefenghua\" target=\"_blank\">Prof. Fenghua He</a>. My research has long been in robot perception, localization, autonomous navigation, and 3D reconstruction. As a core team member, I won the runner-up prize at the ICRA DJI RoboMaster AI Challenge. My goal is to apply AI to the real physical world, exploring the deep integration of spatial intelligence, embodied intelligence, and large models. Wish to create some cool stuff😉🤖🚀✨",
+        "self_introduction_p": "I'm a joint Ph.D. student in Artificial Intelligence at Shanghai Jiao Tong University and Shanghai Innovation Institute, advised by <a href=\"https://thinklab.sjtu.edu.cn/\" target=\"_blank\">Prof. Juncheng Yan</a>, focusing on the data loop (reconstruction-generation-model training & testing) for embodied intelligence. I previously worked at Huawei's Physical Intelligence Innovation Lab. I received my Master's degree in Control Science and Engineering at Harbin Institute of Technology in 2023, under the supervision of <a href=\"https://homepage.hit.edu.cn/hefenghua\" target=\"_blank\">Prof. Fenghua He</a>. My research has long been in robot perception, localization, autonomous navigation, and 3D reconstruction. As a core team member, I won the runner-up prize at the ICRA DJI RoboMaster AI Challenge. My goal is to apply AI to the real physical world, exploring the deep integration of spatial intelligence, embodied intelligence, and large models. Wish to create some cool stuff😉🤖🚀✨",
         "research_interests": "Research Interests",
+        "research_tagline": "World Models · Robotics · Spatial Intelligence",
         "interest_ai_ml": "Embodied/Spatial Intelligence",
         "interest_dl_nn": "Multimodal Large Models",
         "interest_nlp": "3D Reconstruction",
@@ -241,9 +242,8 @@ const translations = {
         "work2_desc": "",
         "contact_info": "Contact Information",
         "contact_email": "Email",
-        "contact_phone": "Phone",
         "contact_address": "Address",
-        "contact_address_value": "China · Shanghai",
+        "contact_address_value": "Shanghai Innovation Institute",
         // Publications
         "publications_section_title": "Publications",
         "filter_all": "All",
@@ -384,6 +384,6 @@ const translations = {
         "video_error_open_in_new_tab": "Open in new tab",
         "video_not_supported": "Your browser does not support the video tag.",
         // Footer
-        "footer_text": "&copy; 2025 Shilong Wang. All rights reserved."
+        "footer_text": "&copy; 2026 Shilong Wang. All rights reserved."
     }
 };

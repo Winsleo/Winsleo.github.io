@@ -1,0 +1,186 @@
+/* Space / point-cloud dark theme. Remove its <link> in index.html to revert. */
+:root { --bg:#070b16; --glass:rgba(14,20,38,.62); --line:rgba(120,170,255,.16); --text:#d7e0f0; --head:#eaf1ff; --acc:#5ad1ff; --acc2:#9b7bff; }
+
+body { background: radial-gradient(1200px 700px at 25% 10%, #101a3a 0%, var(--bg) 60%), var(--bg) !important; color: var(--text); }
+body > section, body > footer { position: relative; z-index: 1; }
+
+/* sections: transparent so the canvas shows through */
+.about-me, .skills, .awards, .publications, .projects, .csdn-blog, section { background: transparent !important; }
+.about-me { background: linear-gradient(180deg, transparent, rgba(7,11,22,.35)) !important; }
+.publications, .awards { background: rgba(7,11,22,.55) !important; }
+
+/* navbar */
+.navbar { background: rgba(7,11,22,.6) !important; box-shadow: 0 1px 0 var(--line) !important; backdrop-filter: blur(14px); }
+.nav-logo h3 { background: linear-gradient(90deg, var(--acc), var(--acc2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav-link { color: var(--text) !important; }
+.nav-link:hover, .nav-link.active { color: var(--acc) !important; }
+.nav-toggle span { background: var(--head) !important; }
+
+/* text */
+h1, h2, h3, h4, h5, .profile-name, .section-title { color: var(--head) !important; }
+.section-title { background: linear-gradient(90deg, #fff, var(--acc)); -webkit-background-clip: text; background-clip: text; color: transparent !important; }
+p, li, .edu-details p, .profile-affiliation, .contact-item span, .stat-item p, .project-description, .intro-text { color: var(--text) !important; }
+.profile-title, .edu-year, .work-period { color: var(--acc) !important; }
+a { color: var(--acc); }
+
+/* glass cards */
+.profile-card, .contact-info, .education-item, .work-item, .publication-item, .project-card, .award-item,
+.skill-category, .stat-item, .abstract-content, .csdn-stats .stat-item {
+    background: var(--glass) !important; backdrop-filter: blur(12px);
+    border: 1px solid var(--line) !important; box-shadow: 0 8px 32px rgba(0,0,0,.35) !important;
+    transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.education-item:hover, .work-item:hover, .publication-item:hover, .project-card:hover, .award-item:hover, .skill-category:hover {
+    transform: translateY(-3px); border-color: rgba(90,209,255,.5) !important;
+    box-shadow: 0 10px 40px rgba(90,209,255,.15) !important;
+}
+.profile-card { border: 1px solid rgba(90,209,255,.5) !important; box-shadow: 0 0 40px rgba(90,209,255,.25) !important; }
+.profile-img img { background: linear-gradient(160deg, rgba(90,209,255,.25), rgba(155,123,255,.25)); }
+
+/* buttons / chips */
+.filter-btn, .category-tab, .social-link, .pub-link, .abstract-toggle { background: rgba(255,255,255,.04) !important; color: var(--acc) !important; border-color: rgba(90,209,255,.45) !important; }
+.filter-btn.active, .filter-btn:hover, .category-tab.active, .category-tab:hover, .social-link:hover, .pub-link:hover {
+    background: linear-gradient(90deg, var(--acc), var(--acc2)) !important; color: #06101f !important; border-color: transparent !important;
+}
+.lang-btn { background: transparent; color: var(--acc); border-color: var(--acc); }
+.lang-btn.active, .lang-btn:hover { background: var(--acc); color: #06101f; }
+.footer { background: rgba(4,7,14,.85) !important; border-top: 1px solid var(--line); }
+.publication-authors strong, .publication-authors b, strong, b { color: var(--head) !important; }
+strong.me, .publication-item strong { color: var(--acc) !important; }
+.intro-text { text-shadow: 0 0 12px #070b16, 0 0 4px #070b16; }
+
+/* contrast fixes for remaining dark-on-dark text */
+.award-item span, .skill-category li, .research-interests li, .work-desc, .work-desc li, .work-details p,
+.contact-value, .publication-venue, .publication-authors, .metric, .project-period,
+.project-content li, .project-features li, .project-description, .project-content p, .project-content ul li,
+.stat-item p, .csdn-stats .stat-item p, .edu-details p, .intro-text p { color: var(--text) !important; }
+.contact-label { color: #93a1c2 !important; }
+.skill-category h3, .contact-info h3, .csdn-stats .stat-item h3, .stat-item h3, .publication-title, .project-content h3 { color: var(--head) !important; }
+.project-card li, .project-card li * { color: var(--text); }
+.project-card li i, .research-interests li i { color: var(--acc) !important; }
+.project-org, .project-company { color: var(--acc) !important; }
+.award-item i, .skill-category h3 i { color: var(--acc) !important; }
+hr { border-color: var(--line); }
+.video-modal .modal-content { background: #0b1226; }
+
+/* section divider glow */
+section + section::before { content:''; display:block; height:1px; margin:0 auto; max-width:900px;
+  background: linear-gradient(90deg, transparent, rgba(90,209,255,.45), rgba(155,123,255,.45), transparent); }
+
+/* scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* avatar glow ring */
+.profile-card { position: relative; }
+.profile-card::before { content:''; position:absolute; inset:-2px; border-radius:22px; z-index:-1;
+  background: conic-gradient(from 0deg, var(--acc), var(--acc2), var(--acc)); filter: blur(14px); opacity:.35; }
+
+/* light mode */
+html[data-theme="light"] { --bg:#eef3fb; --glass:rgba(255,255,255,.72); --line:rgba(40,80,160,.14); --text:#3a4560; --head:#14203d; --acc:#1a7fd4; --acc2:#7a4fe0; }
+html[data-theme="light"] body { background: radial-gradient(1200px 700px at 25% 10%, #dfe9fb 0%, var(--bg) 60%), var(--bg) !important; }
+html[data-theme="light"] .publications, html[data-theme="light"] .awards { background: rgba(255,255,255,.35) !important; }
+html[data-theme="light"] .about-me { background: transparent !important; }
+html[data-theme="light"] .navbar { background: rgba(255,255,255,.7) !important; }
+html[data-theme="light"] .intro-text { text-shadow: none; }
+html[data-theme="light"] .profile-card, html[data-theme="light"] .education-item, html[data-theme="light"] .work-item,
+html[data-theme="light"] .publication-item, html[data-theme="light"] .project-card, html[data-theme="light"] .award-item,
+html[data-theme="light"] .skill-category, html[data-theme="light"] .contact-info, html[data-theme="light"] .csdn-stats .stat-item {
+  box-shadow: 0 8px 28px rgba(30,60,120,.12) !important; }
+html[data-theme="light"] .filter-btn.active, html[data-theme="light"] .filter-btn:hover, html[data-theme="light"] .category-tab.active,
+html[data-theme="light"] .category-tab:hover, html[data-theme="light"] .social-link:hover, html[data-theme="light"] .pub-link:hover,
+html[data-theme="light"] .lang-btn.active, html[data-theme="light"] .lang-btn:hover { color: #fff !important; }
+html[data-theme="light"] .footer { background: #14203d !important; }
+html[data-theme="light"] .video-modal .modal-content { background: #fff; }
+
+/* theme toggle */
+#theme-toggle { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--acc); background: transparent;
+  color: var(--acc); cursor: pointer; font-size: 1rem; line-height: 1; }
+#theme-toggle:hover { background: var(--acc); color: #06101f; }
+
+/* project card details */
+.highlight-item, .highlight-item span { color: var(--text) !important; }
+.highlight-item i { color: var(--acc) !important; }
+.tech-tag { background: rgba(90,209,255,.1) !important; color: var(--acc) !important; border: 1px solid var(--line) !important; }
+html[data-theme="light"] .tech-tag { background: rgba(26,127,212,.08) !important; }
+html[data-theme="light"] .section-title { background: linear-gradient(90deg, var(--head), var(--acc)); -webkit-background-clip: text; background-clip: text; }
+html[data-theme="light"] .intro-text { text-shadow: 0 0 10px #eef3fb, 0 0 4px #eef3fb; }
+html[data-theme="light"] .profile-img img { background: linear-gradient(160deg, rgba(26,127,212,.12), rgba(122,79,224,.12)); }
+
+/* typography */
+:root {
+  --cjk: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", var(--cjk);
+  --display: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, var(--cjk);
+}
+body, button, input { font-family: var(--sans) !important; letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, .profile-name, .section-title, .nav-logo h3, .publication-title { font-family: var(--display) !important; letter-spacing: normal; }
+
+/* small text: readable, slightly larger, more weight */
+p, li, .edu-details p, .work-details p, .publication-venue, .publication-authors, .project-description,
+.highlight-item, .contact-value, .stat-item p { font-size: 1rem; line-height: 1.7; font-weight: 400; }
+.edu-details p, .work-details p, .publication-venue, .contact-value, .profile-affiliation { font-weight: 500; }
+
+/* labels / meta in monospace for a technical feel */
+.edu-year, .work-period, .project-period, .project-org, .project-company, .contact-label, .tech-tag,
+.pub-link, .filter-btn, .category-tab, .abstract-toggle, .lang-btn, .nav-link, .publication-year, .metric {
+  font-family: var(--mono) !important; font-weight: 500; letter-spacing: .02em;
+}
+.edu-year, .work-period, .project-period { font-size: .85rem; }
+.project-org, .project-company { font-size: .85rem; font-weight: 600; }
+.contact-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
+.tech-tag, .pub-link, .abstract-toggle { font-size: .8rem; }
+.nav-link { font-size: .9rem; }
+.profile-title { font-family: var(--display) !important; }
+
+/* Chinese text: avoid mono/letter-spacing artifacts */
+html[lang="zh-CN"] .edu-year, html[lang="zh-CN"] .work-period, html[lang="zh-CN"] .project-period,
+html[lang="zh-CN"] .project-org, html[lang="zh-CN"] .project-company, html[lang="zh-CN"] .tech-tag,
+html[lang="zh-CN"] .pub-link, html[lang="zh-CN"] .filter-btn, html[lang="zh-CN"] .category-tab,
+html[lang="zh-CN"] .abstract-toggle, html[lang="zh-CN"] .nav-link, html[lang="zh-CN"] .contact-label { letter-spacing: .03em; }
+
+/* World Field background */
+#world-field { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none; opacity: .4; }
+html[data-theme="light"] #world-field { opacity: .3; }
+@media (max-width: 768px) { #world-field { opacity: .25; } }
+
+/* tagline inside Research Interests */
+.research-tagline { font-family: var(--mono) !important; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--acc) !important; opacity: .8; margin: -.2rem 0 .9rem; line-height: 1.6; }
+html[lang="zh-CN"] .research-tagline { text-transform: none; letter-spacing: .08em; font-size: .85rem; }
+
+/* readability: body copy a touch heavier, more open, with a soft scrim over the field */
+p, li, .intro-text p, .research-interests li span, .edu-details p, .work-details p, .project-description, .highlight-item {
+  font-weight: 500;
+}
+.intro-text p, .research-interests li { color: #e3eaf8 !important; }
+.intro-text { position: relative; }
+.intro-text::before { content: ''; position: absolute; inset: -1.5rem -2rem; z-index: -1; border-radius: 24px;
+  background: radial-gradient(120% 100% at 0% 0%, rgba(7,11,22,.72), rgba(7,11,22,.45) 60%, transparent 100%); }
+html[data-theme="light"] .intro-text p, html[data-theme="light"] .research-interests li { color: #26314a !important; }
+html[data-theme="light"] .intro-text::before { background: radial-gradient(120% 100% at 0% 0%, rgba(255,255,255,.85), rgba(255,255,255,.5) 60%, transparent 100%); }
+
+/* mobile refinements */
+@media (max-width: 768px) {
+  .nav-logo h3 { font-size: 1.05rem; white-space: nowrap; }
+  .nav-container { gap: .5rem; }
+  .research-tagline { font-size: .72rem; letter-spacing: .06em; }
+  .hero, #world-field { opacity: .22; }
+}
+
+.contact-info .contact-value { font-size: .9rem; line-height: 1.5; letter-spacing: 0; }
+
+/* footer stays dark in both themes: keep its text light */
+.footer p, .footer a { color: #c9d4e8 !important; }
+html[data-theme="light"] .footer p, html[data-theme="light"] .footer a { color: #b9c6e0 !important; }
+
+/* mobile order: avatar block first, then intro, then contact card */
+@media (max-width: 768px) {
+  .intro-content { display: flex; flex-direction: column; gap: 2rem; }
+  .sidebar-content { display: contents; }
+  .profile-section { order: 0; }
+  .intro-text { order: 1; }
+  .contact-info { order: 2; }
+}
