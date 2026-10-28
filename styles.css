@@ -471,7 +471,8 @@ body {
 .profile-card {
     background: white;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1.25rem;
+    max-width: 340px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 3px solid #3498db;
@@ -511,8 +512,8 @@ body {
 
 .intro-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 3rem;
 }
 
 .sidebar-content {
@@ -1165,6 +1166,11 @@ body {
 }
 
 /* 响应式设计 */
+@media (max-width: 1000px) {
+    .nav-menu { gap: 1rem; }
+    .nav-logo h3 { font-size: 1.2rem; }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
